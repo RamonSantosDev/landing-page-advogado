@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* estilo atendimento */
+
+.atendimento{
+    background-color: var(--bg-light);
+    padding: 150px 0;
+}
+
+.atendimento .interface {
+    margin: 0 auto;  
+}
+ 
+.atendimento .itens-container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+ 
+/* ----- Cabeçalho ----- */
+.atendimento .txt-cabecalho {
+    max-width: 500px;
+}
+ 
+.atendimento .txt-cabecalho h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+ 
+/* ----- Etapas ----- */
+.atendimento ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+ 
+.atendimento li {
+    position: relative;
+}
+ 
+/* Círculo com o número */
+.atendimento li span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+ 
+/* Linha ligando uma etapa à próxima */
+.atendimento li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 64px;
+    width: calc(100% - 64px + 32px);
+    height: 2px;
+    background: var(--color-accent);
+}
+ 
+.atendimento li h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+ 
+.atendimento li p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--text-dark);
+}
+
+@media (max-width: 1074px) { .atendimento ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } .atendimento li::after { display: none; } }
+@media (max-width: 767px) {
+ .atendimento { padding: 75px 0; }
+ .atendimento .txt-cabecalho { text-align: center; margin-inline: auto; }
+ .atendimento .txt-cabecalho h2 { font-size: clamp(2rem, 7vw, 2.7rem); }
+ .atendimento ol { grid-template-columns: 1fr; gap: 26px; justify-items: center; }
+ .atendimento li { width: 100%; max-width: 440px; text-align: center; }
+ .atendimento .itens-container { gap: 35px; }
+}

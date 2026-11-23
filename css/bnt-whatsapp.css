@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+.whatsapp-flutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(/images/whatsapp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: pulsar 2s infinite ease-in-out;
+}
+
+
+.whatsapp-flutuante img {
+    
+    width: 35px;
+    height: 35px;
+}
+
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #c9a24da1;
+    }
+    70% {
+        transform: scale(1.1);
+        /* Cria a onda de choque verde saindo do botão */
+        box-shadow: 0 0 0 20px rgba(207, 204, 36, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(211, 199, 37, 0);
+    }
+}

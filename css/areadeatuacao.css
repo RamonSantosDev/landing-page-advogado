@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+/* estilos area de atuação */
+
+.areas-de-atuacao {
+    background-color: var(--bg-dark);
+    padding: 150px 0;
+}
+ 
+.areas-de-atuacao .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+ 
+.areas-de-atuacao .txt-itens {
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+ 
+.areas-de-atuacao .txt-itens h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text-white);
+    line-height: 1.3;
+    padding-top: 15px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+}
+ 
+.areas-de-atuacao .txt-itens p {
+    font-size: 1.2em;
+    color: var(--text-white);
+    line-height: 1.6;
+    max-width: 640px;
+}
+
+.areas-de-atuacao .box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+ 
+.areas-de-atuacao .item-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 0px 20px;
+}
+ 
+.areas-de-atuacao .item-box .box {
+    flex: 0 1 calc(33.333% - 16px);
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 32px 28px;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+ 
+.areas-de-atuacao .box:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+ 
+.areas-de-atuacao .box span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+ 
+.areas-de-atuacao .box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+ 
+.areas-de-atuacao .box p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1074px){
+    .areas-de-atuacao {
+        padding: 90px 0;
+    }
+    .areas-de-atuacao .interface {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .areas-de-atuacao .box-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 90%;
+    }
+
+     
+    
+}
+@media (max-width: 767px) {
+    .areas-de-atuacao { 
+        padding: 75px 0; 
+    }
+    .areas-de-atuacao .txt-itens { 
+        text-align: center; 
+        margin-inline: auto; 
+    }
+    .areas-de-atuacao .box-container { 
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        gap: 22px; 
+    }
+    .areas-de-atuacao .item-box { 
+        width: 100%; 
+        max-width: 440px; 
+        min-width: 0; 
+    }
+    .areas-de-atuacao .box { 
+        text-align: left; 
+    }
+}
+
+@media screen and (max-width: 560px){
+
+    .areas-de-atuacao .txt-itens h2{
+        font-size: 2em;
+        text-align: center;
+        line-height: 1.3;
+        margin: auto;
+    }
+    .areas-de-atuacao .itens-container .box-container {
+        margin: auto;
+        max-width: 90%;
+    }
+
+    .areas-de-atuacao .item-box .box{
+        flex: 1 1 100%;
+    }
+    .areas-de-atuacao .txt-itens p{
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 1.2;
+    } 
+}
+
+
+
+
+

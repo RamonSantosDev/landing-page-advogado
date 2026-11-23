@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+
+/* Estilo da seção de principios */
+
+.principios{
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+ 
+.principios .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+ 
+.principios .txt-itens {
+    text-align: center;
+    margin-bottom: 60px;
+}
+ 
+.principios .txt-itens h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text-dark);
+    max-width: 640px;
+    text-align: left;
+    line-height: 1.3;
+    margin-left: 10px;
+}
+ 
+.principios .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+ 
+.principios .item-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0px 10px 0px 10px;
+}
+ 
+.principios .item-box .box {
+    flex: 1 1 calc(25% - 18px);
+}
+ 
+.principios .box {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    padding: 32px 24px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+ 
+.principios .box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px hsla(41, 48%, 57%, 0.589);
+
+}
+ 
+.principios .box span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+ 
+.principios .box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+ 
+.principios .box p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+
+@media screen and (max-width: 1074px){
+    .principios{
+        padding: 90px 0;
+    }
+    .principios .txt-itens h2{
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.3;
+        margin: auto;
+    }
+
+    .principios .box p {
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+    .principios .box-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 90%;
+    }
+    .principios .box span {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--color-accent);
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+    }
+}   
+
+@media screen and (max-width: 560px){
+    
+    .principios{
+        padding: 30px 0;
+    }
+
+    .principios .txt-itens h2{
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.3;
+        margin: auto;
+    }
+
+    .principios .box p {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+
+    .principios .box-container{
+        flex-direction: column;
+        margin: auto;
+        max-width: 90%;
+    }
+    
+    .principios .item-box .box {
+        flex: 1 1 100%;
+    }
+    .principios .box span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-accent);
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+    }
+
+    .principios .box h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .principios { 
+        padding: 75px 0; 
+    }
+    .principios .txt-itens { 
+        text-align: center; 
+        margin-inline: auto; 
+    }
+    .principios .box-container { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 22px; 
+    }
+    .principios .item-box { 
+        width: 100%; 
+        max-width: 440px; 
+        min-width: 0; 
+    }
+    .principios .box { 
+        text-align: left; 
+    }
+}
